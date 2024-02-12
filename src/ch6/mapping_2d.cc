@@ -194,8 +194,8 @@ cv::Mat Mapping2D::ShowGlobalMap(int max_size) {
     int c_y = global_center[1] * global_map_resolution;
     global_center = Vec2f(c_x / global_map_resolution, c_y / global_map_resolution);  // 全局地图图像中心
 
-    int width = int((bottom_right[0] - top_left[0]) * global_map_resolution + 0.5);
-    int height = int((bottom_right[1] - top_left[1]) * global_map_resolution + 0.5);
+    int width = int(phy_width * global_map_resolution + 0.5);
+    int height = int(phy_height * global_map_resolution + 0.5);
 
     Vec2f center_image = Vec2f(width / 2, height / 2);
     cv::Mat output_image(height, width, CV_8UC3, cv::Scalar(127, 127, 127));
