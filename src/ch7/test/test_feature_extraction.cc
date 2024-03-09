@@ -12,7 +12,7 @@
 #include "common/point_cloud_utils.h"
 
 /// 这里需要vlp16的数据，用wxb的
-DEFINE_string(bag_path, "./dataset/sad/wxb/test1.bag", "path to wxb bag");
+DEFINE_string(bag_path, "/data/slam_data/wxb/test1.bag", "path to wxb bag");
 
 int main(int argc, char** argv) {
     google::InitGoogleLogging(argv[0]);
@@ -22,8 +22,6 @@ int main(int argc, char** argv) {
 
     // 测试角点和平面点的提取
     sad::FeatureExtraction feature_extraction;
-
-    system("rm -rf ./data/ch7/*.pcd");
 
     sad::RosbagIO bag_io(fLS::FLAGS_bag_path);
     bag_io
