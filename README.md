@@ -77,7 +77,7 @@
     sudo apt install -y ros-noetic-pcl-ros ros-noetic-velodyne-msgs libopencv-dev libgoogle-glog-dev libeigen3-dev libsuitesparse-dev libpcl-dev libyaml-cpp-dev libbtbb-dev libgmock-dev
     ```
     - Pangolin: 编译安装thirdparty/pangolin.zip，或者 https://github.com/stevenlovegrove/Pangolin
-    - 编译thirdparty/g2o，或者自行编译安装 https://github.com/RainerKuemmerle/g2o 
+    - 编译thirdparty/g2o (不推荐：自行编译安装 https://github.com/RainerKuemmerle/g2o ）
     - 通过cmake, make安装本repo下的`thirdparty/g2o`库
 - 之后，使用通常的cmake, make方式就可以编译本书所有内容了。例如
 ```bash
